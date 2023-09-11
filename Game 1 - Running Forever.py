@@ -44,6 +44,7 @@ class Player(pygame.sprite.Sprite):
             self.image = self.player_walk[int(self.player_index)]
 
     def update(self):
+        # Making the code i wrote before actually useful.
         self.player_input()
         self.apply_gravity()
         self.animation_state()
