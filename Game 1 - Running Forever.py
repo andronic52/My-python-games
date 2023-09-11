@@ -82,6 +82,7 @@ class Obstacle(pygame.sprite.Sprite):
         self.destroy()
 
     def destroy(self):
+        # If obstacle is off the screen it destroys it self.
         if self.rect.x <= -100:
             self.kill()
 
