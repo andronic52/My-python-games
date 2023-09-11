@@ -70,11 +70,13 @@ class Obstacle(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(midbottom=(randint(900, 1100), y_pos))
 
     def animation_state(self):
+        # Animation but for the obstacles.
         self.animation_index += 0.1
         if self.animation_index > len(self.frames): self.animation_index = 0
         self.image = self.frames[int(self.animation_index)]
 
     def update(self):
+        # Making the code useful again.
         self.animation_state()
         self.rect.x -= 6
         self.destroy()
