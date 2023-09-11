@@ -54,7 +54,7 @@ class Obstacle(pygame.sprite.Sprite):
     # Here is the code for the obstacles in the game.
     def __init__(self, type):
         super().__init__()
-
+    # Basically see's if its a fly or a snail and gives it the respective image.
         if type == 'fly':
             fly_frame_1 = pygame.image.load('../Assets/graphics/Fly/Fly1.png').convert_alpha()
             fly_frame_2 = pygame.image.load('../Assets/graphics/Fly/Fly2.png').convert_alpha()
