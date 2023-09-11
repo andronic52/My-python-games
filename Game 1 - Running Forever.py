@@ -5,6 +5,7 @@ from random import randint, choice
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
+        # Defining variables and importing images.
         super().__init__()
         player_walk_1 = pygame.image.load('../Assets/graphics/Player/player_walk_1.png').convert_alpha()
         player_walk_2 = pygame.image.load('../Assets/graphics/Player/player_walk_2.png').convert_alpha()
@@ -20,18 +21,21 @@ class Player(pygame.sprite.Sprite):
         self.jump_sound.set_volume(0.5)
 
     def player_input(self):
+        # Jump button.
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE] and self.rect.bottom >= 300:
             self.gravity = -20
             self.jump_sound.play()
 
     def apply_gravity(self):
+        # Literally gravity.
         self.gravity += 1
         self.rect.y += self.gravity
         if self.rect.bottom >= 300:
             self.rect.bottom = 300
 
     def animation_state(self):
+        # Animation of the character.
         if self.rect.bottom < 300:
             self.image = self.player_jump
         else:
@@ -46,6 +50,7 @@ class Player(pygame.sprite.Sprite):
 
 
 class Obstacle(pygame.sprite.Sprite):
+    # Here is the code for the obstacles in the game.
     def __init__(self, type):
         super().__init__()
 
