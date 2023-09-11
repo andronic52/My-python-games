@@ -97,6 +97,7 @@ def display_score():
 
 
 def obstacle_movement(obstacle_list):
+    # Obstacles movements, literally.
     if obstacle_list:
         for obstacle_rect in obstacle_list:
             obstacle_rect.x -= 5
