@@ -5,6 +5,7 @@ from pygame.math import Vector2
 
 
 class SNAKE:
+    # Importing most images
     def __init__(self):
         self.head = None
         self.tail = None
