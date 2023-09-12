@@ -10,6 +10,7 @@ screen = pygame.display.set_mode((width, height))
 
 background = pygame.surface.Surface((800, 400))
 
+# Defining player 1 and 2
 player1 = pygame.surface.Surface((10, 50))
 player1_rect = player1.get_rect(midbottom=(20, 200))
 player1.fill('white')
